@@ -3,7 +3,7 @@ var style=require('chalk');
 
 let name=input.question(style.blue("enter your name Gentleman?"));
 console.log(style.green(name)+' welcome here')
-console.log(chalk.red("!!please write the whole option as answer not the 'a,b,c,d'!!"));
+console.log(style.red("!!please write the whole option as answer not the 'a,b,c,d'!!"));
 var highScores = [
   {
     name: "rahul",
@@ -66,10 +66,10 @@ else
 }
 
 
-console.log(style.red("thank you for taking part in the quiz"+style.green("you scored"+score+"  "+ (score/5)*100+"%" )))
+console.log(style.red("thank you for taking part in the quiz"+style.green("you scored "+score+"  "+ (score/5)*100+"%" )))
 console.log("--- High scores Board ----")
 for(var i = 0; i < highScores.length; i++ ){
   var currentHighscorePerson = highScores[i]
   console.log(currentHighscorePerson.name + "   " + currentHighscorePerson.score)
 }
-console.log(chalk.bold.green("if your score is above these people send me teh screenshot i will update in database"));
+console.log(style.bold.green("if your score is above these people send me teh screenshot i will update in database"));
